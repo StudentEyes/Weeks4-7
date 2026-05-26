@@ -9,6 +9,8 @@ public class Week4 : MonoBehaviour
     public Camera gameCamera;
     public Color caughtColour;
 
+    public Hider creatureHider;
+
     public List<SpriteRenderer> uncaughtCreatures;
     public List<SpriteRenderer> caughtCreatures;
 
@@ -59,6 +61,7 @@ public class Week4 : MonoBehaviour
             //Debug.Log("Is creature caught["+isCreatureCaught.ToString()+"]");
             if (!isCreatureCaught)
             {
+                creatureHider.hide();
                 caughtCreatures.Add(creatureRenderer);
             }
 
